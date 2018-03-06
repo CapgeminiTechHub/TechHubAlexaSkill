@@ -3,7 +3,6 @@
 from __future__ import print_function
 import math
 import string
-import random
 
 locale = "en-GB"
 
@@ -29,9 +28,7 @@ def on_intent(request, session):
     print(request)
 
     # take action depending on the specified intent
-    if intent_name == "AMAZON.StartOverIntent":
-        return start_game(request, True, locale)
-    elif intent_name == "AMAZON.CancelIntent":
+    if intent_name == "AMAZON.CancelIntent":
         return cancel_response(locale)
     elif intent_name == "AMAZON.StopIntent":
         return cancel_response(locale)
